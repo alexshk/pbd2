@@ -1,0 +1,404 @@
+{"0": {
+    "doc": "AgilePilotCover",
+    "title": "AgilePilotCover",
+    "content": "This policy pays a Death Benefit in the event of accidental death whilst operating an Australian registered aircraft. ",
+    "url": "http://localhost:4000/pbadocs/products/agile-pilot-cover",
+    "relUrl": "/products/agile-pilot-cover"
+  },"1": {
+    "doc": "AgilePilotCover",
+    "title": "Parameter Explanations",
+    "content": "| Parameter | Type | Description | . | product | String | The product slug: “agilepilotcover” | . | plan | String | The identifier of the plan that has been chosen, from the list provided in the product info response. See explanation below of the plan identifiers | . | name_of_insured | String | The name of the life to be insured | . | licence_number | String | The licence number of the person being insured | . | next_of_kin_name | String | The name of the person to contact in an emergency | . | next_of_kin_phone | String | The phone number of the person to be contacted | . | region | String | The state the business is based in | . | name | String | The name of the person responsible for the policy | . | email | String | The email address of the person responsible for the policy | . ",
+    "url": "http://localhost:4000/pbadocs/products/agile-pilot-cover#parameter-explanations",
+    "relUrl": "/products/agile-pilot-cover#parameter-explanations"
+  },"2": {
+    "doc": "AgilePilotCover",
+    "title": "Minimum Parameters to get a quote",
+    "content": "{ \"product\": \"agilepilotcover\", \"plan\": \"plus_rw_ag\" } . ",
+    "url": "http://localhost:4000/pbadocs/products/agile-pilot-cover#minimum-parameters-to-get-a-quote",
+    "relUrl": "/products/agile-pilot-cover#minimum-parameters-to-get-a-quote"
+  },"3": {
+    "doc": "AgilePilotCover",
+    "title": "All Parameters",
+    "content": "{ \"product\": \"agilepilotcover\", \"plan\": \"plus_rw_ag\", \"name_of_insured\": \"Mary Smith\", \"licence_number\": \"ZZ1234\", \"next_of_kin_name\": \"Susan Smith\", \"next_of_kin_phone\": \"0400 000000\", \"name\": \"Mary Smith\", \"email\": \"marysmith@example.com\", \"region\": \"VIC\" } . ",
+    "url": "http://localhost:4000/pbadocs/products/agile-pilot-cover#all-parameters",
+    "relUrl": "/products/agile-pilot-cover#all-parameters"
+  },"4": {
+    "doc": "AgilePilotCover",
+    "title": "Plan Identifier Explanation",
+    "content": "The identifier of the plan is a string made up of three components, separated by an underscore. The first part of the identifier is the level of cover, the second is the type of aircraft flown, and the third is the main type of flying activity. | The level options are basic, plus, premium and platinum | The wing type options are fw (Fixed Wing Only) and rw (Fixed and Rotor Wing) | The activity types are student, private, commercial, and ag (Agriculture) | . Each plan returned in the product info response includes information about the cover, the price, and the activity and wing type. For example, the Plus plan for Fixed Wing Only, Agriculture, would be: . { \"id\": \"feb68b1c-94bc-4277-97c0-b7f95ac46808\", \"identifier\": \"plus_fw_ag\", \"grouping\": \"plan\", \"label\": \"Plus\", \"position\": 1, \"data\": { \"usage\": \"agricultural\", \"benefits\": { \"accidental_death\": \"$75,000\" }, \"currency\": \"AUD\", \"wing_type\": \"fixed\", \"grand_total\": 1395.0, \"sales_tax_label\": \"GST\", \"class_of_business\": \"KG\" } } . ",
+    "url": "http://localhost:4000/pbadocs/products/agile-pilot-cover#plan-identifier-explanation",
+    "relUrl": "/products/agile-pilot-cover#plan-identifier-explanation"
+  },"5": {
+    "doc": "Cargo Cover",
+    "title": "Cargo Cover",
+    "content": "Cargo insurance provides protection against all risks of physical loss or damage to freight from any external cause during shipping, whether by land, sea or air. ",
+    "url": "http://localhost:4000/pbadocs/products/cargo-cover",
+    "relUrl": "/products/cargo-cover"
+  },"6": {
+    "doc": "Cargo Cover",
+    "title": "Parameter Explanations",
+    "content": "| Parameter | Type | Description | . | product | String | The product slug: “cargo” | . | origin_country | String | The Alpha-2 code for the country where the goods begin their journey. Must be a value from the list supplied by product info | . | destination_country | String | The Alpha-2 code for the country where the goods will end their journey. Must be a value from the list supplied by product info | . | transport_mode | String | The transport method used to ship the goods, must be a value from the list supplied by product info | . | items | String | An array of items to be insured, see below | . | region | String | The state where the shipper of the goods resides | . | name | String | The name of the person responsible for the policy | . | email | String | The email address of the person responsible for the policy | . | name_of_insured (optional) | String | The name of a business or another person who is the actual policy holder | . Each Item in the array of items must contain to the following parameters: . | Parameter | Type | Description | . | insured_item_category | String | The category of the item, the identifer of a value from the list of categories supplied by product info | . | insured_item_description | String | A text description of the item | . | insured_item_value | Number | The value of the item in dollars | . ",
+    "url": "http://localhost:4000/pbadocs/products/cargo-cover#parameter-explanations",
+    "relUrl": "/products/cargo-cover#parameter-explanations"
+  },"7": {
+    "doc": "Cargo Cover",
+    "title": "Minimum Parameters to get a quote",
+    "content": "{ \"product\": \"cargo\", \"origin_country\": \"AU\", \"destination_country\": \"AU\", \"transport_mode\": \"LND\", \"items\": [ { \"insured_item_category\": \"BOOK\", \"insured_item_description\": \"Rare books\", \"insured_item_value\": \"3575\" } ], \"region\": \"VIC\" } . ",
+    "url": "http://localhost:4000/pbadocs/products/cargo-cover#minimum-parameters-to-get-a-quote",
+    "relUrl": "/products/cargo-cover#minimum-parameters-to-get-a-quote"
+  },"8": {
+    "doc": "Cargo Cover",
+    "title": "All Parameters",
+    "content": "{ \"product\": \"cargo\", \"origin_country\": \"AU\", \"destination_country\": \"AU\", \"transport_mode\": \"LND\", \"items\": [ { \"insured_item_category\": \"BOOK\", \"insured_item_description\": \"Rare books\", \"insured_item_value\": \"3575\" } ], \"region\": \"VIC\", \"name\": \"Mary Smith\", \"email\": \"marysmith@example.com\" } . ",
+    "url": "http://localhost:4000/pbadocs/products/cargo-cover#all-parameters",
+    "relUrl": "/products/cargo-cover#all-parameters"
+  },"9": {
+    "doc": "CyberCare with End Point Protection",
+    "title": "CyberCare with End Point Protection",
+    "content": "Cyberattacks and data breach protection . ",
+    "url": "http://localhost:4000/pbadocs/products/cyber-care-with-endpoint-protection",
+    "relUrl": "/products/cyber-care-with-endpoint-protection"
+  },"10": {
+    "doc": "CyberCare with End Point Protection",
+    "title": "Parameter Explanations",
+    "content": "| Parameter | Type | Description | . | product | String | The product slug: “cybercareau” | . | aggregate_limit | String | The identifier for the limit amount selected | . | business_type | String | The identifier of the selected business type, from the list provided in the product info response | . | revenue_value | Integer | The revenue for last year, in dollars | . | protected_end_points_count | Integer | The number of end points to be covered by Cyber Indemnity Solutions. Between 0 and 40. 0 means no protection required. Above 40 requires referral. | . | region | String | The state the business is based in | . | policy_start_date | String | Optional, see Products page for more info | . | policy_end_date | String | Optional, same format as start date. The shortest length for a policy is 8 months, the longest is 18 months. Leave blank to for the default duration of 12 months. | . | name_of_insured | String | The name of the business being covered | . | name | String | The name of the person responsible for the policy | . | email | String | The email address of the person responsible for the policy | . ",
+    "url": "http://localhost:4000/pbadocs/products/cyber-care-with-endpoint-protection#parameter-explanations",
+    "relUrl": "/products/cyber-care-with-endpoint-protection#parameter-explanations"
+  },"11": {
+    "doc": "CyberCare with End Point Protection",
+    "title": "Minimum Parameters to get a quote",
+    "content": "{ \"product\": \"cybercareau\", \"business_type\": \"payroll_services_provider\", \"aggregate_limit\": \"aggregate_limit_1\", \"revenue_value\": 1250000, \"protected_end_points_count\": 5, \"region\": \"VIC\" } . ",
+    "url": "http://localhost:4000/pbadocs/products/cyber-care-with-endpoint-protection#minimum-parameters-to-get-a-quote",
+    "relUrl": "/products/cyber-care-with-endpoint-protection#minimum-parameters-to-get-a-quote"
+  },"12": {
+    "doc": "CyberCare with End Point Protection",
+    "title": "All Parameters",
+    "content": "{ \"product\": \"cybercareau\", \"business_type\": \"payroll_services_provider\", \"aggregate_limit\": \"aggregate_limit_1\", \"revenue_value\": 1250000, \"protected_end_points_count\": 5, \"region\": \"VIC\", \"name_of_insured\": \"My Business Pty Ltd\", \"name\": \"Mary Smith\", \"email\": \"marysmith@example.com\" } . ",
+    "url": "http://localhost:4000/pbadocs/products/cyber-care-with-endpoint-protection#all-parameters",
+    "relUrl": "/products/cyber-care-with-endpoint-protection#all-parameters"
+  },"13": {
+    "doc": "CyberCare",
+    "title": "CyberCare",
+    "content": "Cyberattacks and data breach protection . ",
+    "url": "http://localhost:4000/pbadocs/products/cyber-care",
+    "relUrl": "/products/cyber-care"
+  },"14": {
+    "doc": "CyberCare",
+    "title": "Parameter Explanations",
+    "content": "| Parameter | Type | Description | . | product | String | The product slug: “cybercare” | . | plan | String | The identifier of the plan that has been chosen, from the list provided in the product info response | . | name_of_insured | String | The name of the business being covered | . | business_type | String | The identifier of the selected business type, from the list provided in the product info response | . | revenue | Number | The revenue for last year, in dollars | . | region | String | The state the business is based in | . | name | String | The name of the person responsible for the policy | . | email | String | The email address of the person responsible for the policy | . ",
+    "url": "http://localhost:4000/pbadocs/products/cyber-care#parameter-explanations",
+    "relUrl": "/products/cyber-care#parameter-explanations"
+  },"15": {
+    "doc": "CyberCare",
+    "title": "Minimum Parameters to get a quote",
+    "content": "{ \"product\": \"cybercare\", \"plan\": \"premium_0\" } . ",
+    "url": "http://localhost:4000/pbadocs/products/cyber-care#minimum-parameters-to-get-a-quote",
+    "relUrl": "/products/cyber-care#minimum-parameters-to-get-a-quote"
+  },"16": {
+    "doc": "CyberCare",
+    "title": "All Parameters",
+    "content": "{ \"product\": \"cybercare\", \"plan\": \"premium_0\", \"name_of_insured\": \"My Business Pty Ltd\", \"name\": \"Mary Smith\", \"email\": \"marysmith@example.com\", \"business_type\": \"consultant\", \"revenue\": \"130000\", \"region\": \"VIC\" } . ",
+    "url": "http://localhost:4000/pbadocs/products/cyber-care#all-parameters",
+    "relUrl": "/products/cyber-care#all-parameters"
+  },"17": {
+    "doc": "Products",
+    "title": "Products",
+    "content": "Each product has it’s own requirements . See each product page for requirements specific to that product. Each one has its own fields that are required to create the quote, and others to bind the quote. ",
+    "url": "http://localhost:4000/pbadocs/products",
+    "relUrl": "/products"
+  },"18": {
+    "doc": "Products",
+    "title": "Common Parameters – Required",
+    "content": "The following parameters are applicable to all products, and are not required to get a quote, but they are required before the quote can be bound: . name . This is generally the name of the person getting the quote. For an individual, it is most likely the policy holder, although in some cases it may be the person buying the policy for someone else. If that is the case, the name_of_insured parameter must name the other party. This name will be used to create a user account so this person can log in to their Agile portal and view and manage their policy. email . The email address of the person named above. This will be the address the policy documents will be sent to, and this address will act as the log in to the Agile portal . name_of_insured . This is required for some products (where the policy is for a business, for example) and optional for others. See the description for the name parameter to see where you might want to provide this parameter when it is optional . ",
+    "url": "http://localhost:4000/pbadocs/products#common-parameters--required",
+    "relUrl": "/products#common-parameters--required"
+  },"19": {
+    "doc": "Products",
+    "title": "Common Parameters – Optional",
+    "content": "In addition to the required fields, you may optionally provide the following: . no_customer_contact . Ordinarily, once a policy is bound, the policy holder will receive an email with information about the policy and how to access their Agile account. Some partners prefer to handle all contact with the policy holder themselves. If you pass no_customer_contact: true with the quote parameters (either on create or update), then no email will be sent. Additional, Agile’s internal systems clearly mark the policy as Do Not Contact. policy_start_date . If this parameter is not provided, cover on the policy starts from the day it is bound. If you need the policy cover to start at a different date you may provide a value. The format is 'YYYY-MM-DD'. If you provide a date in the past, the request will fail validation. Additionally, there is a limit to how far in advance the start date may be set. Unless otherwise stated on specific products, the limit is 30 days in the future. custom_field . This is a string parameter that can be used for anything you choose. We do not validate or use the values supplied in this parameter, but it may be helpful for you to supply to help with your own reporting, or for identifying your own customers. ",
+    "url": "http://localhost:4000/pbadocs/products#common-parameters--optional",
+    "relUrl": "/products#common-parameters--optional"
+  },"20": {
+    "doc": "Guides",
+    "title": "Powered by Agile",
+    "content": "Welcome to the Powered by Agile API . ",
+    "url": "http://localhost:4000/pbadocs/guides/#powered-by-agile",
+    "relUrl": "/guides/#powered-by-agile"
+  },"21": {
+    "doc": "Guides",
+    "title": "Environments",
+    "content": "As well as the production environment, the API has a staging environment. Please speak to us to organise access to the staging environment for testing your integrations. The urls for the environments are: . Staging: https://api.staging-agileaperture.com . Production: https://api.agileaperture.com . ",
+    "url": "http://localhost:4000/pbadocs/guides/#environments",
+    "relUrl": "/guides/#environments"
+  },"22": {
+    "doc": "Guides",
+    "title": "Quote and Bind",
+    "content": "Creating quotes and policies using the API is very simple, but each product has its own rules about which parameters are needed. Step 1 – Product Info . The product info is subject to change, albeit infrequently, so it would be best to either populate any UI elements you build dynamically from the data in the response, or check for changes regularly. The /v1/products/:product_slug endpoint will provide a list of the parameters that are acceptable to generate a quote. In addition, the product info includes the duty of disclosure (in Markdown format) and the url to download a copy of the Product Disclosure Statement (pds_url) . Step 2 – Get a Quote . By sending the parameters required for a specific product, you will get a quote in the response. If you supplied all the parameters for the quote initially, you will be able to go straight to step 4! . Step 3 (if needed) – Update a Quote . If the quote is incomplete, you will not be able to bind it. Add the required parameters that weren’t supplied when creating the quote by updating the quote . Step 4 – Bind the Quote . When you “bind” a quote, you create the policy using all the information provided in the preceding steps. You will need to provide information that either enables Agile to charge for the policy or commit to paying later, depending on your arrangements with Agile. ",
+    "url": "http://localhost:4000/pbadocs/guides/#quote-and-bind",
+    "relUrl": "/guides/#quote-and-bind"
+  },"23": {
+    "doc": "Guides",
+    "title": "Guides",
+    "content": " ",
+    "url": "http://localhost:4000/pbadocs/guides/",
+    "relUrl": "/guides/"
+  },"24": {
+    "doc": "API Reference",
+    "title": "Quote and Policy generation",
+    "content": "Generating quotes and policies with the Powered by Agile API . ",
+    "url": "http://localhost:4000/pbadocs/api/#quote-and-policy-generation",
+    "relUrl": "/api/#quote-and-policy-generation"
+  },"25": {
+    "doc": "API Reference",
+    "title": "Overview",
+    "content": "The AgileAPI allows 3rd parties to generate quotes and policies for insurance products. To generate a quote and subsequently accept the quote to create a policy there are 4 endpoints. ",
+    "url": "http://localhost:4000/pbadocs/api/#overview",
+    "relUrl": "/api/#overview"
+  },"26": {
+    "doc": "API Reference",
+    "title": "Authentication",
+    "content": "All requests are associated with a specific “partner” and permissions are based on the settings that Agile have made for that partner. Client access tokens should be provided in the Authorization header as Bearer tokens. Example request with bearer token: . curl --request GET \\ --url https://api.staging-agileaperture.com/v1/products/cargo \\ --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhZmZpbGiMDE4Y...RoqFdnaforvXxO9O3NrgmZE' . ",
+    "url": "http://localhost:4000/pbadocs/api/#authentication",
+    "relUrl": "/api/#authentication"
+  },"27": {
+    "doc": "API Reference",
+    "title": "Responses",
+    "content": "All responses are JSON encoded. Timestamps are in UTC and formatted as ISO8601. ",
+    "url": "http://localhost:4000/pbadocs/api/#responses",
+    "relUrl": "/api/#responses"
+  },"28": {
+    "doc": "API Reference",
+    "title": "Errors",
+    "content": "All 400 series errors (400, 401, 403, etc) will be returned with an optional JSON object in the body and a application/json content type. ",
+    "url": "http://localhost:4000/pbadocs/api/#errors",
+    "relUrl": "/api/#errors"
+  },"29": {
+    "doc": "API Reference",
+    "title": "HTTP Status Codes",
+    "content": "We use HTTP status codes to indicate success or failure of a request. Success codes: . | 200 OK – Request succeeded. Response included | 201 Created – Resource created. URL to new resource in Location header | 204 No Content – Request succeeded, but no response body | . Error codes: . | 400 Bad Request – Could not parse request | 401 Unauthorized – No authentication credentials provided or authentication failed | 403 Forbidden – Authenticated user does not have access | 404 Not Found – Resource not found | 415 Unsupported Media Type – POST/PUT/PATCH request occurred without a application/json content type | 422 Unprocessable Entry – A request to modify or create a resource failed due to a validation error | 500, 501, 502, 503, etc – An internal server error occured | . ",
+    "url": "http://localhost:4000/pbadocs/api/#http-status-codes",
+    "relUrl": "/api/#http-status-codes"
+  },"30": {
+    "doc": "API Reference",
+    "title": "Validation Errors",
+    "content": "In case of validation errors on a POST/PUT/PATCH request, a 422 Unprocessable Entry status code will be returned. The JSON response body will include an array of error messages. ",
+    "url": "http://localhost:4000/pbadocs/api/#validation-errors",
+    "relUrl": "/api/#validation-errors"
+  },"31": {
+    "doc": "API Reference",
+    "title": "Endpoints",
+    "content": " ",
+    "url": "http://localhost:4000/pbadocs/api/#endpoints",
+    "relUrl": "/api/#endpoints"
+  },"32": {
+    "doc": "API Reference",
+    "title": "GET /v1/products/:product_slug",
+    "content": "This endpoint will return data that can be used to construct a form for requesting a quote. This includes information about the product in general, and rates and loadings that are required to generate a valid quotation. ",
+    "url": "http://localhost:4000/pbadocs/api/#get-v1productsproduct_slug",
+    "relUrl": "/api/#get-v1productsproduct_slug"
+  },"33": {
+    "doc": "API Reference",
+    "title": "POST /v1/quotes",
+    "content": "The quotes endpoint accepts a set of parameters for a product, and returns data details for the cost of insuring the item/s along with other pertinent information. This includes the quote id that can the be used to generate a policy. ",
+    "url": "http://localhost:4000/pbadocs/api/#post-v1quotes",
+    "relUrl": "/api/#post-v1quotes"
+  },"34": {
+    "doc": "API Reference",
+    "title": "PATCH /v1/quotes/:id",
+    "content": "If needed, the quote can be updated with changed or extra parameter. Each product has a minimum set of parameters requited to create a quote, but the may be extra parameters needed to bind the quote. If you didn’t provide all the parameters when creating the quote, you can provide them with this endpoint. ",
+    "url": "http://localhost:4000/pbadocs/api/#patch-v1quotesid",
+    "relUrl": "/api/#patch-v1quotesid"
+  },"35": {
+    "doc": "API Reference",
+    "title": "POST /v1/quotes/:id/bind",
+    "content": "This creates a policy from the quote, using the payment method you provide. ",
+    "url": "http://localhost:4000/pbadocs/api/#post-v1quotesidbind",
+    "relUrl": "/api/#post-v1quotesidbind"
+  },"36": {
+    "doc": "API Reference",
+    "title": "API Reference",
+    "content": " ",
+    "url": "http://localhost:4000/pbadocs/api/",
+    "relUrl": "/api/"
+  },"37": {
+    "doc": "Parcel Cover",
+    "title": "Parcel Cover",
+    "content": "Provides protection against all risks of physical loss or damage to goods from any external cause during shipping, whether by land, sea or air. ",
+    "url": "http://localhost:4000/pbadocs/products/parcel-cover",
+    "relUrl": "/products/parcel-cover"
+  },"38": {
+    "doc": "Parcel Cover",
+    "title": "Parameter Explanations",
+    "content": "| Parameter | Type | Description | . | product | String | The product slug: “parcel” | . | origin_country | String | The Alpha-2 code for the country where the goods begin their journey. Must be a value from the list supplied by product info | . | destination_country | String | The Alpha-2 code for the country where the goods will end their journey. Must be a value from the list supplied by product info | . | transport_mode | String | The transport method used to ship the goods, must be a value from the list supplied by product info | . | items | String | An array of items to be insured, see below | . | region | String | The state where the shipper of the goods resides | . | name | String | The name of the person responsible for the policy | . | email | String | The email address of the person responsible for the policy | . | name_of_insured (optional) | String | The name of a business or another person who is the actual policy holder | . Each Item in the array of items must contain to the following parameters: . | Parameter | Type | Description | . | insured_item_category | String | The category of the item, the identifer of a value from the list of categories supplied by product info | . | insured_item_description | String | A text description of the item | . | insured_item_value | Number | The value of the item in dollars | . ",
+    "url": "http://localhost:4000/pbadocs/products/parcel-cover#parameter-explanations",
+    "relUrl": "/products/parcel-cover#parameter-explanations"
+  },"39": {
+    "doc": "Parcel Cover",
+    "title": "Minimum Parameters to get a quote",
+    "content": "{ \"product\": \"parcel\", \"origin_country\": \"AU\", \"destination_country\": \"AU\", \"transport_mode\": \"LND\", \"items\": [ { \"insured_item_category\": \"BOOK\", \"insured_item_description\": \"Rare books\", \"insured_item_value\": \"3575\" } ], \"region\": \"VIC\" } . ",
+    "url": "http://localhost:4000/pbadocs/products/parcel-cover#minimum-parameters-to-get-a-quote",
+    "relUrl": "/products/parcel-cover#minimum-parameters-to-get-a-quote"
+  },"40": {
+    "doc": "Parcel Cover",
+    "title": "All Parameters",
+    "content": "{ \"product\": \"parcel\", \"origin_country\": \"AU\", \"destination_country\": \"AU\", \"transport_mode\": \"LND\", \"items\": [ { \"insured_item_category\": \"BOOK\", \"insured_item_description\": \"Rare books\", \"insured_item_value\": \"3575\" } ], \"region\": \"VIC\", \"name\": \"Mary Smith\", \"email\": \"marysmith@example.com\" } . ",
+    "url": "http://localhost:4000/pbadocs/products/parcel-cover#all-parameters",
+    "relUrl": "/products/parcel-cover#all-parameters"
+  },"41": {
+    "doc": "/v1/products/:product_slug",
+    "title": "GET /v1/products/:product_slug",
+    "content": "This endpoint will return data that can be used to construct a form for requesting a quote. This includes information about the product in general, and rates and loadings that are required to generate a valid quotation. Each product consists of a number of parameters, both required and optional, that can be used to generate a quote. ",
+    "url": "http://localhost:4000/pbadocs/api/v1/products-product-slug/#get-v1productsproduct_slug",
+    "relUrl": "/api/v1/products-product-slug/#get-v1productsproduct_slug"
+  },"42": {
+    "doc": "/v1/products/:product_slug",
+    "title": "Path params",
+    "content": "product_slug – string, required param . When providing one of the of the parameters to get a quote, use the identifier property. For instance, from the example response above, to specify that the mode of transport the insured goods are taking is “Land”, the relevant value in the JSON object you POST to the quotes endpoint would be: . { \"transport_mode\": \"LND\" } . cURL Node Ruby Javascript Python curl --request GET \\ --url https://api.staging-agileaperture.com/v1/products/cargo \\ --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwYXJ0bmVyX2lkIjoiMTIzMzIzNjgtMjcwNS00ZTNiLWI3OTUtY2Y3YWUwOGRlZWE3IiwiaWF0IjoxNTU4NTY5MzY1fQ.q0_oulKwggDw1yQcM877OXhOm2X6sVOhUNnu7_jUzmg' \\ --header 'Content-Type: application/json' . const fetch = require('node-fetch'); const url = 'https://api.staging-agileaperture.com/v1/products/cargo'; const options = { method: 'GET', headers: { Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJwYXJ0bmVyX2lkIjoiMTIzMzIzNjgtMjcwNS00ZTNiLWI3OTUtY2Y3YWUwOGRlZWE3IiwiaWF0IjoxNTU4NTY5MzY1fQ.q0_oulKwggDw1yQcM877OXhOm2X6sVOhUNnu7_jUzmg', 'Content-Type': 'application/json' } }; fetch(url, options) .then(res =&gt; res.json()) .then(json =&gt; console.log(json)) .catch(err =&gt; console.error('error:' + err)); . require 'uri' require 'net/http' require 'openssl' url = URI(\"https://api.staging-agileaperture.com/v1/products/cargo\") http = Net::HTTP.new(url.host, url.port) http.use_ssl = true request = Net::HTTP::Get.new(url) request[\"Authorization\"] = 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJwYXJ0bmVyX2lkIjoiMTIzMzIzNjgtMjcwNS00ZTNiLWI3OTUtY2Y3YWUwOGRlZWE3IiwiaWF0IjoxNTU4NTY5MzY1fQ.q0_oulKwggDw1yQcM877OXhOm2X6sVOhUNnu7_jUzmg' request[\"Content-Type\"] = 'application/json' response = http.request(request) puts response.read_body . const options = { method: 'GET', headers: { Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJwYXJ0bmVyX2lkIjoiMTIzMzIzNjgtMjcwNS00ZTNiLWI3OTUtY2Y3YWUwOGRlZWE3IiwiaWF0IjoxNTU4NTY5MzY1fQ.q0_oulKwggDw1yQcM877OXhOm2X6sVOhUNnu7_jUzmg', 'Content-Type': 'application/json' } }; fetch('https://api.staging-agileaperture.com/v1/products/cargo', options) .then(response =&gt; console.log(response)) .catch(err =&gt; console.error(err)); . import requests url = \"https://api.staging-agileaperture.com/v1/products/cargo\" headers = { \"Authorization\": \"Bearer eyJhbGciOiJIUzI1NiJ9.eyJwYXJ0bmVyX2lkIjoiMTIzMzIzNjgtMjcwNS00ZTNiLWI3OTUtY2Y3YWUwOGRlZWE3IiwiaWF0IjoxNTU4NTY5MzY1fQ.q0_oulKwggDw1yQcM877OXhOm2X6sVOhUNnu7_jUzmg\", \"Content-Type\": \"application/json\" } response = requests.request(\"GET\", url, headers=headers) print(response.text) . ",
+    "url": "http://localhost:4000/pbadocs/api/v1/products-product-slug/#path-params",
+    "relUrl": "/api/v1/products-product-slug/#path-params"
+  },"43": {
+    "doc": "/v1/products/:product_slug",
+    "title": "Responses examples",
+    "content": "200 OK . { \"name\": \"Cargo Cover\", \"pds_url\": \"https://herokuapp.com/products/cargo/Agile-Cargo-Cover-PDS.pdf\", \"max_insured_value\": 500000, \"benefits\": [ { \"title\": \"To your door\", \"description\": \"This insurance attaches from the time the goods are first moved in the warehouse or at the place of storage for the purpose of the immediate loading into or onto the Conveyance for the commencement of Transit, continues during the ordinary course of transit and terminates on completion of unloading from the Conveyance in or at the final destination as nominated by You.\" }, { \"title\": \"Loss or damage\", \"description\": \"Subject to the terms, Conditions of Cover and exclusions of this Policy, We will insure You up to the Sum Insured for loss of or damage to the Goods occurring whilst in Transit during the Period of Insurance caused by Accidental Damage.\" } ], \"selectors\": { \"insured_items_category\": [ { \"identifier\": \"ACID\", \"label\": \"Acids\" }, { \"identifier\": \"AGRI\", \"label\": \"Agricultural Products - bagged\" } ], \"country\": [ { \"identifier\": \"AO\", \"label\": \"Angola\" }, { \"identifier\": \"AT\", \"label\": \"Austria\" }, { \"identifier\": \"SN\", \"label\": \"Senegal\" } ], \"transport_mode\": [ { \"identifier\": \"AIR\", \"label\": \"Air\" }, { \"identifier\": \"LND\", \"label\": \"Land\" }, { \"identifier\": \"SEA\", \"label\": \"Sea\" }, { \"identifier\": \"CMB\", \"label\": \"Combination\" } ] } } . ",
+    "url": "http://localhost:4000/pbadocs/api/v1/products-product-slug/#responses-examples",
+    "relUrl": "/api/v1/products-product-slug/#responses-examples"
+  },"44": {
+    "doc": "/v1/products/:product_slug",
+    "title": "/v1/products/:product_slug",
+    "content": " ",
+    "url": "http://localhost:4000/pbadocs/api/v1/products-product-slug/",
+    "relUrl": "/api/v1/products-product-slug/"
+  },"45": {
+    "doc": "/v1/quotes/:id/bind",
+    "title": "POST /v1/quotes/:id/bind",
+    "content": "This creates a policy from the quote, using the payment method you provide. When a quote is completed, this endpoint is used to “bind” it, creating a policy using the information that has been supplied. ",
+    "url": "http://localhost:4000/pbadocs/api/v1/quotes-id-bind#post-v1quotesidbind",
+    "relUrl": "/api/v1/quotes-id-bind#post-v1quotesidbind"
+  },"46": {
+    "doc": "/v1/quotes/:id/bind",
+    "title": "Path params",
+    "content": "quote_id – string, required param . The UUID of the quote being bound . ",
+    "url": "http://localhost:4000/pbadocs/api/v1/quotes-id-bind#path-params",
+    "relUrl": "/api/v1/quotes-id-bind#path-params"
+  },"47": {
+    "doc": "/v1/quotes/:id/bind",
+    "title": "Body params",
+    "content": "RAW_BODY – object . The parameters required to bind the quote . read_and_understood – boolean . Stipulates that the buyer has read and understood the relevant policy documents . payment – object . How will the policy be paid for? . method – string . The payment method being used to bind the policy. Either stripe or deferred. Availability of the deferred payment type depends on you agreement with Agile. token – string . Token for the payment, if applicable . ",
+    "url": "http://localhost:4000/pbadocs/api/v1/quotes-id-bind#body-params",
+    "relUrl": "/api/v1/quotes-id-bind#body-params"
+  },"48": {
+    "doc": "/v1/quotes/:id/bind",
+    "title": "Example Stripe payment",
+    "content": "{ \"read_and_agreed\": true, \"payment\": { \"method\": \"stripe\", \"token\": \"tok_123123123\" } } . ",
+    "url": "http://localhost:4000/pbadocs/api/v1/quotes-id-bind#example-stripe-payment",
+    "relUrl": "/api/v1/quotes-id-bind#example-stripe-payment"
+  },"49": {
+    "doc": "/v1/quotes/:id/bind",
+    "title": "Example Deferred payment (if available)",
+    "content": "{ \"read_and_agreed\": true, \"payment\": { \"method\": \"deferred\" } } . ",
+    "url": "http://localhost:4000/pbadocs/api/v1/quotes-id-bind#example-deferred-payment-if-available",
+    "relUrl": "/api/v1/quotes-id-bind#example-deferred-payment-if-available"
+  },"50": {
+    "doc": "/v1/quotes/:id/bind",
+    "title": "Response examples",
+    "content": "200 OK . { \"id\": \"3918b399-74b5-4f1b-9f1d-10412679c76a\", \"policy_number\": \"SAMPLE_W02B0003000E\", \"status\": \"active\", \"read_and_agreed\": true, \"created_at\": \"2019-05-23T01:32:44.257Z\", \"updated_at\": \"2019-05-23T01:32:44.257Z\", \"start_at\": \"2019-05-23T01:32:44.158Z\", \"end_at\": \"2020-05-23T01:32:44.160Z\", \"customer\": { \"id\": \"1fd10c81-73dc-444b-948a-03f53f11aaf6\", \"name\": \"Mary Smith\", \"email\": \"mary@example.com\", \"phone\": null, \"created_at\": \"2019-04-30T04:49:49.949Z\", \"updated_at\": \"2019-04-30T04:49:49.949Z\" }, \"quote\": { \"id\": \"751831b7-079f-4b1b-9ac2-0fa5c1b7442s\", \"customer_id\": \"1fd10c81-73dc-444b-948a-03f53f11aaf6\", \"premium\": 1500, \"premium_sales_tax\": 150, \"stamp_duty\": 82.5, \"admin_fee\": 152.27, \"admin_fee_sales_tax\": 15.23, \"total_sales_tax\": 165.23, \"grand_total\": 1900, \"currency\": \"AUD\", \"sales_tax_label\": \"GST\", \"excess\": 1000, \"custom_field\": null, \"expires_at\": \"2019-06-22T23:59:59.999Z\", \"created_at\": \"2019-05-23T01:18:40.981Z\", \"updated_at\": \"2019-05-23T01:32:44.119Z\", \"benefits\": [ { \"title\": \"List of benefits\", \"description\": \"Explanation of each benefit...\" } ], \"product\": { \"name\": \"CyberCare\", \"pds_url\": \"http://aperture.pdev/products/cybercare/Agile-CyberCare-PDS.pdf\", \"min_insured_value\": 250000, \"max_insured_value\": 10000000, \"duty_of_disclosure\": \"# Duty of Disclosure\\n## What You must tell Us\\nWe will ask You various questions when You apply for cover. When You answer those questions, You must be honest and You have a duty under law to tell Us anything known to You, and which a reasonable person in the circumstances, would include in answer to the question. We will use the answers in deciding whether to insure You, and anyone else to be insured under the Policy, and on what terms. You have this same duty to disclose those matters to Us before You renew, extend, vary or reinstate Your Policy.\\n## If You do not tell us\\nIf You do not answer Our questions in this way, We may reduce Our liability under contract in respect of a claim or refuse to pay a claim, or cancel the Policy. If You answer Our questions fraudulently, We may refuse to pay a claim and treat the Policy as never having commenced.\" }, \"parameters\": { \"plan\": \"premium_1\", \"region\": \"NSW\", \"business_type\": \"Accountant\", \"revenue\": 135000, \"name_of_insured\": \"Mary Smith Accounting Pty Ltd\", \"name\": \"Mary Smith \", \"email\": \"mary@example.com\", \"plan_label\": \"Premium\", \"region_label\": \"New South Wales\" } } } . 422 Unprocessable Entity . { \"errors\": { \"read_and_agreed\": [ \"must be accepted\" ] } } . ",
+    "url": "http://localhost:4000/pbadocs/api/v1/quotes-id-bind#response-examples",
+    "relUrl": "/api/v1/quotes-id-bind#response-examples"
+  },"51": {
+    "doc": "/v1/quotes/:id/bind",
+    "title": "/v1/quotes/:id/bind",
+    "content": " ",
+    "url": "http://localhost:4000/pbadocs/api/v1/quotes-id-bind",
+    "relUrl": "/api/v1/quotes-id-bind"
+  },"52": {
+    "doc": "/v1/quotes/:id",
+    "title": "PATCH /v1/quotes/:id",
+    "content": "If needed, the quote can be updated with changed or extra parameter. Each product has a minimum set of parameters requited to create a quote, but the may be extra parameters needed to bind the quote. If you didn’t provide all the parameters when creating the quote, you can provide them with this endpoint. Once a quote has been created, the parameters can be modified. This may be required if the quote that was created has missing required fields. ",
+    "url": "http://localhost:4000/pbadocs/api/v1/quotes-id/#patch-v1quotesid",
+    "relUrl": "/api/v1/quotes-id/#patch-v1quotesid"
+  },"53": {
+    "doc": "/v1/quotes/:id",
+    "title": "Path params",
+    "content": "quote_id – string, required param . The UUID of the quote to be updated . ",
+    "url": "http://localhost:4000/pbadocs/api/v1/quotes-id/#path-params",
+    "relUrl": "/api/v1/quotes-id/#path-params"
+  },"54": {
+    "doc": "/v1/quotes/:id",
+    "title": "Body params",
+    "content": "RAW_BODY – object . The data that is needed to get a quote. The requirements vary per product, see the reference guide for specific product instructions and information . product – string . The product for which the quote is being created . plan – string . The identifier for the required plan. The available plans are listed in the product info endpoint response . name_of_insured – string . The name of the business that is being insured . business_type – string . The type of business being insured. Please see list in the Cybercare documentation . revenue – float . The business revenue for last year . region – string . The State where the business is based . name – string . The name of the person responsible for getting the quote . email – string . The email address of the person getting the quote . There are certain parameters that are required to calculate the price, and these are all that is required to generate the quote. However, the quote cannot be bound until all parameters are supplied. If you don’t provide all the parameters when you create the quote, then you can use the update quote endpoint. The response will let you know which parameters are still required with an array of keys in the missing_required_fields attribute on the response (see example above). See the guide for details about which parameters are required for each product. ",
+    "url": "http://localhost:4000/pbadocs/api/v1/quotes-id/#body-params",
+    "relUrl": "/api/v1/quotes-id/#body-params"
+  },"55": {
+    "doc": "/v1/quotes/:id",
+    "title": "Example quote request body",
+    "content": "{ \"product\": \"cybercare\", \"plan\": \"premium_1\", \"name_of_insured\": \"Mary Smith Accounting Pty Ltd\", \"business_type\": \"Architect\", \"revenue\": 135000, \"region\": \"NSW\", \"name\": \"Mary Smith \", \"email\": \"mary@example.com\" } . ",
+    "url": "http://localhost:4000/pbadocs/api/v1/quotes-id/#example-quote-request-body",
+    "relUrl": "/api/v1/quotes-id/#example-quote-request-body"
+  },"56": {
+    "doc": "/v1/quotes/:id",
+    "title": "Response examples",
+    "content": "200 OK . { \"id\": \"751831b7-079f-4b1b-9ac2-0fa5c1b7442s\", \"customer_id\": null, \"premium\": 1500.0, \"premium_sales_tax\": 150.0, \"stamp_duty\": 165.0, \"admin_fee\": 77.27, \"admin_fee_sales_tax\": 7.73, \"total_sales_tax\": 157.73, \"grand_total\": 1900.0, \"currency\": \"AUD\", \"sales_tax_label\": \"GST\", \"excess\": 1000.0, \"custom_field\": null, \"expires_at\": \"2019-06-22T23:59:59.999Z\", \"created_at\": \"2019-05-23T01:08:54.907Z\", \"updated_at\": \"2019-05-23T01:08:54.907Z\", \"benefits\": [ { \"title\": \"List of benefits\", \"description\": \"Explanation of each benefit...\" } ], \"product\": { \"name\": \"CyberCare\", \"pds_url\": \"http://aperture.pdev/products/cybercare/Agile-CyberCare-PDS.pdf\", \"min_insured_value\": 250000, \"max_insured_value\": 10000000, \"duty_of_disclosure\": \"# Duty of Disclosure\\n## What You must tell Us\\nWe will ask You various questions when You apply for cover. When You answer those questions, You must be honest and You have a duty under law to tell Us anything known to You, and which a reasonable person in the circumstances, would include in answer to the question. We will use the answers in deciding whether to insure You, and anyone else to be insured under the Policy, and on what terms. You have this same duty to disclose those matters to Us before You renew, extend, vary or reinstate Your Policy.\\n## If You do not tell us\\nIf You do not answer Our questions in this way, We may reduce Our liability under contract in respect of a claim or refuse to pay a claim, or cancel the Policy. If You answer Our questions fraudulently, We may refuse to pay a claim and treat the Policy as never having commenced.\" }, \"parameters\": { \"plan\": \"premium_1\", \"region\": \"VIC\", \"business_type\": \"Architect\", \"revenue\": 135000.0, \"name_of_insured\": \"Mary Smith Accounting Pty Ltd\", \"name\": \"Mary Smith \", \"email\": \"mary@example.com\", \"plan_label\": \"Premium\", \"region_label\": \"Victoria\" } } . 422 Unprocessable Entity . { \"errors\": { \"plan\": [ \"can't be blank\" ] } } . ",
+    "url": "http://localhost:4000/pbadocs/api/v1/quotes-id/#response-examples",
+    "relUrl": "/api/v1/quotes-id/#response-examples"
+  },"57": {
+    "doc": "/v1/quotes/:id",
+    "title": "/v1/quotes/:id",
+    "content": " ",
+    "url": "http://localhost:4000/pbadocs/api/v1/quotes-id/",
+    "relUrl": "/api/v1/quotes-id/"
+  },"58": {
+    "doc": "/v1/quotes",
+    "title": "POST /v1/quotes",
+    "content": "The quotes endpoint accepts a set of parameters for a product, and returns data details for the cost of insuring the item/s along with other pertinent information. This includes the quote id that can the be used to generate a policy. In order to generate quote the create quote endpoint should be used. After submitting the required and optional parameters from the product info endpoint. The create quote endpoint will return a document that describes the quote and the price of the quote. ",
+    "url": "http://localhost:4000/pbadocs/api/v1/quotes/#post-v1quotes",
+    "relUrl": "/api/v1/quotes/#post-v1quotes"
+  },"59": {
+    "doc": "/v1/quotes",
+    "title": "Body params",
+    "content": "RAW_BODY – object . The data that is needed to get a quote. The requirements vary per product, see the reference guide for specific product instructions and information . product – string . The product for which the quote is being created . plan – string . The identifier for the required plan. The available plans are listed in the product info endpoint response . name_of_insured – string . The name of the business that is being insured . business_type – string . The type of business being insured. Please see list in the Cybercare documentation . revenue – float . The business revenue for last year . region – string . The State where the business is based . name – string . The name of the person responsible for getting the quote . email – string . The email address of the person getting the quote . There are certain parameters that are required to calculate the price, and these are all that is required to generate the quote. However, the quote cannot be bound until all parameters are supplied. If you don’t provide all the parameters when you create the quote, then you can use the update quote endpoint. The response will let you know which parameters are still required with an array of keys in the missing_required_fields attribute on the response (see example above). See the guide for details about which parameters are required for each product. ",
+    "url": "http://localhost:4000/pbadocs/api/v1/quotes/#body-params",
+    "relUrl": "/api/v1/quotes/#body-params"
+  },"60": {
+    "doc": "/v1/quotes",
+    "title": "Example quote request body",
+    "content": "{ \"product\": \"cybercare\", \"plan\": \"premium_1\", \"name_of_insured\": \"Mary Smith Accounting Pty Ltd\", \"business_type\": \"Architect\", \"revenue\": 135000, \"region\": \"NSW\", \"name\": \"Mary Smith \", \"email\": \"mary@example.com\" } . ",
+    "url": "http://localhost:4000/pbadocs/api/v1/quotes/#example-quote-request-body",
+    "relUrl": "/api/v1/quotes/#example-quote-request-body"
+  },"61": {
+    "doc": "/v1/quotes",
+    "title": "Response examples",
+    "content": "200 OK . { \"id\": \"751831b7-079f-4b1b-9ac2-0fa5c1b7442s\", \"customer_id\": null, \"premium\": 1500.0, \"premium_sales_tax\": 150.0, \"stamp_duty\": 165.0, \"admin_fee\": 77.27, \"admin_fee_sales_tax\": 7.73, \"total_sales_tax\": 157.73, \"grand_total\": 1900.0, \"currency\": \"AUD\", \"sales_tax_label\": \"GST\", \"excess\": 1000.0, \"custom_field\": null, \"expires_at\": \"2019-06-22T23:59:59.999Z\", \"created_at\": \"2019-05-23T01:08:54.907Z\", \"updated_at\": \"2019-05-23T01:08:54.907Z\", \"benefits\": [ { \"title\": \"List of benefits\", \"description\": \"Explanation of each benefit...\" } ], \"product\": { \"name\": \"CyberCare\", \"pds_url\": \"http://aperture.pdev/products/cybercare/Agile-CyberCare-PDS.pdf\", \"min_insured_value\": 250000, \"max_insured_value\": 10000000, \"duty_of_disclosure\": \"# Duty of Disclosure\\n## What You must tell Us\\nWe will ask You various questions when You apply for cover. When You answer those questions, You must be honest and You have a duty under law to tell Us anything known to You, and which a reasonable person in the circumstances, would include in answer to the question. We will use the answers in deciding whether to insure You, and anyone else to be insured under the Policy, and on what terms. You have this same duty to disclose those matters to Us before You renew, extend, vary or reinstate Your Policy.\\n## If You do not tell us\\nIf You do not answer Our questions in this way, We may reduce Our liability under contract in respect of a claim or refuse to pay a claim, or cancel the Policy. If You answer Our questions fraudulently, We may refuse to pay a claim and treat the Policy as never having commenced.\" }, \"parameters\": { \"plan\": \"premium_1\", \"region\": \"VIC\", \"business_type\": \"Architect\", \"revenue\": 135000.0, \"name_of_insured\": \"Mary Smith Accounting Pty Ltd\", \"name\": \"Mary Smith \", \"email\": \"mary@example.com\", \"plan_label\": \"Premium\", \"region_label\": \"Victoria\" } } . 422 Unprocessable Entity . { \"errors\": { \"plan\": [ \"can't be blank\" ] } } . ",
+    "url": "http://localhost:4000/pbadocs/api/v1/quotes/#response-examples",
+    "relUrl": "/api/v1/quotes/#response-examples"
+  },"62": {
+    "doc": "/v1/quotes",
+    "title": "/v1/quotes",
+    "content": " ",
+    "url": "http://localhost:4000/pbadocs/api/v1/quotes/",
+    "relUrl": "/api/v1/quotes/"
+  },"63": {
+    "doc": "SendCover",
+    "title": "SendCover",
+    "content": "Provides protection against all risks of physical loss or damage to goods from any external cause during shipping, whether by land, sea or air. ",
+    "url": "http://localhost:4000/pbadocs/products/send-cover",
+    "relUrl": "/products/send-cover"
+  },"64": {
+    "doc": "SendCover",
+    "title": "Parameter Explanations",
+    "content": "| Parameter | Type | Description | . | product | String | The product slug: “sendcover” | . | origin_country | String | The Alpha-2 code for the country where the goods begin their journey. Must be a value from the list supplied by product info | . | destination_country | String | The Alpha-2 code for the country where the goods will end their journey. Must be a value from the list supplied by product info | . | transport_mode | String | The transport method used to ship the goods, must be a value from the list supplied by product info | . | items | String | An array of items to be insured, see below | . | region | String | The state where the shipper of the goods resides | . | name | String | The name of the person responsible for the policy | . | email | String | The email address of the person responsible for the policy | . | name_of_insured (optional) | String | The name of a business or another person who is the actual policy holder | . Each Item in the array of items must contain to the following parameters: . | Parameter | Type | Description | . | insured_item_category | String | The category of the item, the identifer of a value from the list of categories supplied by product info | . | insured_item_description | String | A text description of the item | . | insured_item_value | Number | The value of the item in dollars | . ",
+    "url": "http://localhost:4000/pbadocs/products/send-cover#parameter-explanations",
+    "relUrl": "/products/send-cover#parameter-explanations"
+  },"65": {
+    "doc": "SendCover",
+    "title": "Minimum Parameters to get a quote",
+    "content": "{ \"product\": \"sendcover\", \"origin_country\": \"AU\", \"destination_country\": \"AU\", \"transport_mode\": \"LND\", \"items\": [ { \"insured_item_category\": \"BOOK\", \"insured_item_description\": \"Rare books\", \"insured_item_value\": \"3575\" } ], \"region\": \"VIC\" } . ",
+    "url": "http://localhost:4000/pbadocs/products/send-cover#minimum-parameters-to-get-a-quote",
+    "relUrl": "/products/send-cover#minimum-parameters-to-get-a-quote"
+  },"66": {
+    "doc": "SendCover",
+    "title": "All Parameters",
+    "content": "{ \"product\": \"sendcover\", \"origin_country\": \"AU\", \"destination_country\": \"AU\", \"transport_mode\": \"LND\", \"items\": [ { \"insured_item_category\": \"BOOK\", \"insured_item_description\": \"Rare books\", \"insured_item_value\": \"3575\" } ], \"region\": \"VIC\", \"name\": \"Mary Smith\", \"email\": \"marysmith@example.com\" } . ",
+    "url": "http://localhost:4000/pbadocs/products/send-cover#all-parameters",
+    "relUrl": "/products/send-cover#all-parameters"
+  }
+}
