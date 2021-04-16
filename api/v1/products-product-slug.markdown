@@ -23,19 +23,15 @@ When providing one of the of the parameters to get a quote, use the identifier p
 }
 ```
 
-
-{% codetabs %}
-
-{% codetab cURL %}
+#### cURL
 ```shell
 curl --request GET \
   --url https://api.staging-agileaperture.com/v1/products/cargo \
   --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwYXJ0bmVyX2lkIjoiMTIzMzIzNjgtMjcwNS00ZTNiLWI3OTUtY2Y3YWUwOGRlZWE3IiwiaWF0IjoxNTU4NTY5MzY1fQ.q0_oulKwggDw1yQcM877OXhOm2X6sVOhUNnu7_jUzmg' \
   --header 'Content-Type: application/json'
 ```
-{% endcodetab %}
 
-{% codetab Node %}
+#### Node
 ```js
 const fetch = require('node-fetch');
 
@@ -54,9 +50,7 @@ fetch(url, options)
   .then(json => console.log(json))
   .catch(err => console.error('error:' + err));
 ```
-{% endcodetab %}
-
-{% codetab Ruby %}
+#### Ruby
 ```ruby
 require 'uri'
 require 'net/http'
@@ -74,9 +68,7 @@ request["Content-Type"] = 'application/json'
 response = http.request(request)
 puts response.read_body
 ```
-{% endcodetab %}
-
-{% codetab Javascript %}
+#### Javascript
 ```js
 const options = {
   method: 'GET',
@@ -90,9 +82,7 @@ fetch('https://api.staging-agileaperture.com/v1/products/cargo', options)
   .then(response => console.log(response))
   .catch(err => console.error(err));
 ```
-{% endcodetab %}
-
-{% codetab Python %}
+#### Python
 ```python
 import requests
 
@@ -107,10 +97,6 @@ response = requests.request("GET", url, headers=headers)
 
 print(response.text)
 ```
-{% endcodetab %}
-
-{% endcodetabs %}
-
 ## Responses examples
 \
 `200 OK`{: .fs-5 }
